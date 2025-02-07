@@ -82,4 +82,4 @@ def main():
     st.write(pred_proba_df)
 
 if _name_ == "_main_":
-    main(
+    main()
