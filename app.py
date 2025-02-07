@@ -27,7 +27,7 @@ def main():
     # Evaluate the model (test set accuracy)
     accuracy = model.score(X_test, y_test)
 
-    st.write(f"Model Test Accuracy: *{accuracy:.2f}*")
+    st.write(f"Model Test Accuracy: **{accuracy:.2f}**")
 
     # 4. Create sliders for user input
     st.sidebar.header("Input Feature Values")
@@ -75,11 +75,11 @@ def main():
     prediction_proba = model.predict_proba(input_df)
 
     st.subheader("Prediction")
-    st.write(f"Predicted class: *{target_names[prediction][0]}*")
+    st.write(f"Predicted class: **{target_names[prediction][0]}**")
 
     st.subheader("Prediction Probabilities")
     pred_proba_df = pd.DataFrame(prediction_proba, columns=target_names)
     st.write(pred_proba_df)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
